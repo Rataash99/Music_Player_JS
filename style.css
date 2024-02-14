@@ -1,0 +1,259 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+:root {
+    --primary: rgb(12, 12, 12);
+    --secondary: #ffffff; 
+  }
+[data-theme = "dark"]{
+    color: var(--secondary);
+    background-color: rgba(101, 89, 235, 0.214);
+    border-radius: 3px;
+    padding: 0.6rem;
+}
+[data-theme = "light"]{
+    color: var(--primary);
+    background-color: rgba(55, 159, 222, 1);
+    border-radius: 3px;
+    padding: 0.6rem;
+}
+body{
+    background: var(--primary);
+    color:white;
+    font-size: 14px;
+}
+  
+#container{
+    padding: 0rem 0.5rem;
+}
+
+/* css for header  */
+#top-header{
+    /* border: 2px solid red; */
+    position: fixed;
+    box-shadow: rgba(163, 133, 232, 0.19) 0px 10px 20px, rgba(94, 89, 235, 0.23) 0px 6px 6px;
+    z-index: 10;
+    background-color: var(--primary);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle-theme{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 1px solid var(--secondary);
+    padding: 2px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 1s ease-out;
+}
+.toggler{
+    position: absolute;
+    width: 55%;
+    height:  100%;
+    background-color: var(--secondary);
+    right: -1px;
+    top: 0;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(53, 160, 222), rgb(118, 73, 233));
+}
+
+#logo{
+    width: 5rem;
+    padding: 5px;
+}
+#top-header h1{
+    display: none;
+}
+
+/* css for main section  */
+#player-main{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* css for main left section  */
+#left{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.selection{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.genre{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#select-genre{
+    border-radius: 5px;
+    padding: 5px;
+    background: linear-gradient(to right, rgb(53, 160, 222), rgb(126, 86, 226));
+    border:none;
+    outline: 0;
+}
+
+
+/* css for mid section  */
+#middle{
+    bottom : 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.music-info{
+    /* border: 2px solid red; */
+    background: linear-gradient(to right, rgb(53, 160, 222), rgb(118, 73, 233));
+    border-radius: 2px;
+    padding: 0.3rem;
+
+}
+.song-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.player{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.ctrl{
+    display: flex;
+    /* border: 2px solid red; */
+    margin: auto;
+    gap: 2rem;
+}
+.ctrl i{
+    font-size: 1.7rem;
+}
+
+.music-img{
+    width: 100%;
+}
+audio{
+    width: 100%;
+    max-width: 18rem;
+    height: 2rem;
+}
+
+
+/* css for right section of main  */
+#right{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.right-header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    /* flex-wrap: wrap; */
+}
+.playlist-input{
+    position: relative;
+}
+.pL-data{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.right-header input{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(126, 86, 226, 0.767);
+    outline: none;
+    color: white;
+    border-radius: 3px;
+    padding: 0.6rem;
+    padding-right: 1rem;
+    font-size: 14px;
+}
+.search-playlist{
+    position: absolute;
+    right: 6px;
+    top: 11px;
+    font-size: 0.8rem;
+}
+
+.right-header input::placeholder{
+    color:rgba(126, 86, 226, 0.829)
+}
+#create-playlist{
+    margin: auto;
+}
+.all-playlist, .curr-playlist{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.all-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.cu-li{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.fa-trash-can{
+    position: absolute;
+    right: 5px;
+}
+
+
+
+
+
+/* utility CSS */
+.pointer{
+    cursor: pointer;
+}
+.scale:hover{
+    transition: 0.1s ease-out;
+    transform: scale(1.02);
+}
+.btn{
+    padding: 0.6rem;
+    border-radius: 3px;
+    outline: none;
+    border:none;
+    background: linear-gradient(to right, rgb(53, 160, 222), rgb(118, 73, 233));
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+li{
+    background: linear-gradient(to right, rgb(53, 160, 222), rgb(118, 73, 233));
+    padding: 0.3rem;
+    list-style-type: none;
+    border-radius: 2px;
+
+}
+ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}

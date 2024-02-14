@@ -1,0 +1,87 @@
+@media only screen and (min-width: 500px) {
+    body{
+        font-size: 16px;
+    }
+    #player-main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 7rem;
+    }
+    #left{
+        width: 48.34%;
+    }
+    #middle{
+        width: 48.34%;
+    }
+    #right{
+        width: 100%;
+    }
+   
+    .right-header{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .pL-data{
+        width: 50%;
+    }
+    .PL-input{
+        min-width: 14rem;
+    }
+}
+@media only screen and (min-width: 900px){
+    #player-main{
+        /* border: 2px solid red; */
+        flex-wrap: nowrap;
+        align-items: center;
+        height: 100vh;
+        margin-top: 0;
+    }
+    #left{
+        width: 31%;
+        height: 80vh;
+    }
+    #middle{
+        width: 32%;
+        height: 80vh;
+    }
+    #right{
+        width: 33%;
+        justify-content: flex-start;
+        align-items: center;
+        height: 80vh;
+    }
+    .PL-input{
+        min-width: 17vw;
+    }
+    .right-header{
+        width: 100%;
+        margin:0;
+    }
+    .pL-data{
+        width: 100%;
+        margin: 0;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .PL-input{
+        min-width: 18vw;
+    }
+}
+@media only screen and (min-width: 1400px){
+    .PL-input{
+        min-width: 20vw;
+    }
+    #top-header{
+        padding-left: 5.5%;
+        padding-right: 7%;
+    }
+    #player-main{
+        max-width: 90%;
+        margin: auto;
+    }
+
+}

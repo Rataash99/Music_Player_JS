@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/27b0574623.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <!-- header of music player -->
+      <header id="top-header">
+        <img
+          id="logo"
+          src="./Images/mu-high-resolution-logo-transparent.png"
+          width="100"
+          alt=""
+        />
+        <h1>Music Player</h1>
+        <div class="toggle-theme">
+          <div class="toggler right pointer"></div>
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </div>
+      </header>
+
+      <!-- main section of the music player  -->
+      <main id="player-main">
+        <!-- left section of music player starts here  -->
+        <aside id="left" data-theme="dark">
+          <div class="genre">
+            <p class="filter-genre">Filter by Genre:</p>
+            <select name="music" id="select-genre" class="pointer">
+              <option value="All">All</option>
+              <option value="Hip Hop">Hip Hop</option>
+              <option value="Pop">Pop</option>
+              <option value="Rock">Rock</option>
+            </select>
+          </div>
+          <div class="selection">
+            <h2 class="song-genre">
+              <span class="selected-genre">All</span> Songs
+            </h2>
+            <ul class="song-list"></ul>
+          </div>
+        </aside>
+        <!-- left section of music player ends here  -->
+
+        <!-- ---------------------------------------------------------------------- -->
+
+        <!-- middle section of music player starts here  -->
+        <section id="middle" data-theme="dark">
+          <div class="music-info">
+            <img class="music-img" src="./music/rip/rip.jpg" alt="" />
+            <div class="song-info">
+              <h3 class="song-name">RIP</h3>
+              <p class="song-artist">8 Graves</p>
+            </div>
+          </div>
+          <div class="player">
+            <audio controls>
+              <source
+                class="music-src"
+                src="./music/rip/rip.mp3"
+                type="audio/mpeg"
+              />
+              Your browser does not support the audio tag.
+            </audio>
+            <div class="ctrl">
+              <i
+                id="prev"
+                class="fa-solid fa-circle-chevron-left pointer scale"
+              ></i>
+              <i
+                id="next"
+                class="fa-solid fa-circle-chevron-right pointer scale"
+              ></i>
+            </div>
+            <span class="addToPlaylist pointer scale btn">Add to Playlist</span>
+          </div>
+        </section>
+        <!-- middle section of music player ends here  -->
+
+        <!-- ---------------------------------------------------------------------- -->
+
+        <!-- right section of music player starts here  -->
+        <aside id="right" data-theme="dark">
+          <header class="right-header">
+            <div class="playlist-input">
+              <input
+                class="PL-input"
+                type="text"
+                placeholder="Enter playlist name"
+              />
+              <i
+                class="fa-solid fa-magnifying-glass search-playlist pointer scale"
+              ></i>
+            </div>
+            <span class="scale pointer btn" id="create-playlist"
+              >Create PlayList</span
+            >
+          </header>
+          <div class="pL-data">
+            <div class="curr-playlist">
+              <h2>Current PlayList</h2>
+              <ul class="curr-list"></ul>
+            </div>
+            <div class="all-playlist">
+              <h2>All PlayList</h2>
+              <ul class="all-list"></ul>
+            </div>
+          </div>
+        </aside>
+        <!-- right section of music player ends here  -->
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

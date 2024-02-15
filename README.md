@@ -1,7 +1,5 @@
 # **Music Player**
 
-## `Music Player` application.git add
-
 ## Table of contents
 
 - [Overview](#overview)

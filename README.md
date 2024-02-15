@@ -1,6 +1,6 @@
-# **Market Square an E-Commerce Web App**
+# **Music Player**
 
-## `Music Player` application.
+## `Music Player` application.git add
 
 ## Table of contents
 
